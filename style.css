@@ -1,0 +1,100 @@
+
+/*------   google "font" choose your preference and import  ------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap'); 
+
+/*@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+	font-family:'Roboto',sens-serif;
+	margin: 0;
+	display:flex;
+	flex-direction:column;
+	align-items:center; /*align horizontaly*/
+	justify-content:center; /*---align vertical----*/
+	height:100vh; /* ----  needs for align vertical-----*/
+	overflow:hidden;  /*------  no scrollbar appears------*/
+	background-color:pink;
+}
+
+.container{   /* big box with everything in it */
+	border:solid 1px;  
+	text-align:center;  
+}
+
+.progress-container{  /* box that contains the cirlces and the "bars  */
+		display:flex;   /*makes it in a row*/
+		width:450px;
+		justify-content:space-between;  /*  leaves even space between circles */
+		margin-bottom:30px;	
+		position:relative;	
+}
+
+.progress-container::before{  /* the line that is visible at first */
+	content:"";  /*  MUST put it when you use "before"  */
+	background-color:purple;
+	width:100%;
+	height:6px;
+	position:absolute;
+	/*  centers the line */
+	top:50%;
+	transform:translateY(-50%);
+
+	z-index:-1;  /* line behind numbers */
+}
+
+
+.progress{  /* the growing line-bar */
+	background-color:yellow;
+	position:absolute;
+	width:0%;  /*so it wont be visible at first  */
+	height:5px;
+	top:50%;
+	transform:translateY(-50%);
+	z-index:-1; 
+	transition:1s ease;  /*  when it will start grow we eant to do it smooth  */
+}
+
+.circle{   /*  the circles */
+	background-color:cyan;
+	color:red;
+	height:30px;
+	width:30px;
+	border-radius:50%;  /*  make it round  /*
+	/*  next three lines is to center the numbers  */
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+	border:3px solid grey;
+	transition:2s ease-out;  /*  for the border color  */
+}
+
+.circle.active{  /* the circle that growing line has reached  */
+	border-color:black;
+}
+
+
+.btn{
+	background-color:lightblue;
+	border:0;
+	border-radius:10px;  /* rounded corners */
+	cursor:pointer;
+	font-family:inherit;
+	padding:10px 50px;
+	margin:0px 30px;
+	font-size:14px;
+}
+
+.btn:active{
+	transform:scale(0.8);	/*  button gets smaller when pressed  */
+}
+
+.btn:disabled{  /* when button is disabled make it grey and dont change the cursor to hand */
+	background-color:lightgrey;
+	cursor:default;
+}
