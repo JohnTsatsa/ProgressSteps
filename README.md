@@ -20,7 +20,7 @@ Customize the button(disabled and not)
 ### Javascript
 Make a click event on "next" button that increases an active-indicator and check not to exceed the numbers of circle  
 Make a click event on "previous" button that decreases an active-indicator and check not to go below 1  
-In any of two events that occurs, needs to set active the circles from the active one and below 
+In any of two events that occurs, needs to set active the circles from the active one and below   
 Expand the width of line-bar(2) 
 Disable the button that needs according to active number (disable "previous" if active is 1, disable "next" button if active number is the last circle
 
