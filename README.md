@@ -1,5 +1,7 @@
 # Progress Steps
 
+#### Demo https://johntsatsa.github.io/ProgressSteps/
+
 ## Description
 The following project has 4 circles, a line-bar(1) that lays behind the circles, a line-bar(2) with no width and two buttons that defines the width of the line-bar(2).     
 The "next" button increases the width of line-bar(2) and the "previous" button decreases it accordignally.     
